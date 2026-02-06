@@ -12,6 +12,14 @@ const nextConfig = {
         ]
       }
     ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/api/external/:path*",
+        destination: "http://labyrinth30.duckdns.org/:path*",
+      },
+    ];
   }
 };
 

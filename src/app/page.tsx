@@ -28,13 +28,13 @@ export default function Home() {
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/select">
               <Button size="lg" className="h-14 px-8 text-lg font-bold bg-[#3182F6] hover:bg-[#1B64DA] rounded-2xl shadow-lg shadow-blue-100 transition-all hover:scale-105">
-                가상 입사 시작하기
+                서비스 시작하기
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-medium rounded-2xl border-gray-200 text-[#4E5968] hover:bg-gray-50">
+            {/* <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-medium rounded-2xl border-gray-200 text-[#4E5968] hover:bg-gray-50">
               서비스 소개 보기
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
