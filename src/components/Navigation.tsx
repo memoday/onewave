@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { Code } from "lucide-react";
 import Link from "next/link";
 
 export function Navigation() {
