@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ArrowRight, Code2, Users, Rocket } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { ArrowRight, Code2, Users, Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -14,20 +14,25 @@ export default function Home() {
             <span className="animate-pulse w-2 h-2 rounded-full bg-blue-600"></span>
             실무 경험을 위한 새로운 도약
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold text-[#191F28] tracking-tight leading-[1.1]">
-            실전 코드베이스에 중도 합류하는<br/>
+            실전 코드베이스에 중도 합류하는
+            <br />
             <span className="text-[#3182F6]">첫 프로젝트 경험, COZZY</span>
           </h1>
-          
+
           <p className="text-xl text-[#4E5968] max-w-2xl mx-auto leading-relaxed">
-            실제 기업 환경과 유사한 프로젝트에 참여하여<br className="hidden md:block"/>
-            코드 독해력과 기술 역량을 키워보세요. 
+            실제 기업 환경과 유사한 프로젝트에 참여하여
+            <br className="hidden md:block" />
+            코드 독해력과 기술 역량을 키워보세요.
           </p>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/select">
-              <Button size="lg" className="h-14 px-8 text-lg font-bold bg-[#3182F6] hover:bg-[#1B64DA] rounded-2xl shadow-lg shadow-blue-100 transition-all hover:scale-105">
+              <Button
+                size="lg"
+                className="h-14 px-8 text-lg font-bold bg-[#3182F6] hover:bg-[#1B64DA] rounded-2xl shadow-lg shadow-blue-100 transition-all hover:scale-105"
+              >
                 서비스 시작하기
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -47,32 +52,41 @@ export default function Home() {
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                 <Code2 className="w-7 h-7 text-[#3182F6]" />
               </div>
-              <h3 className="text-xl font-bold text-[#191F28] mb-3">나에게 맞는 프로젝트 선택</h3>
+              <h3 className="text-xl font-bold text-[#191F28] mb-3">
+                나에게 맞는 프로젝트 선택
+              </h3>
               <p className="text-[#4E5968] leading-relaxed">
-                관심 스택·난이도·도메인을 설정하면 실전처럼 진행 중인 프로젝트를 추천해 드려요.
+                관심 스택·난이도·도메인을 설정하면 실전처럼 진행 중인 프로젝트를
+                추천해 드려요.
               </p>
             </div>
             <div className="group p-8 rounded-[32px] bg-gray-50 hover:bg-blue-50/50 transition-colors">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                 <Users className="w-7 h-7 text-[#3182F6]" />
               </div>
-              <h3 className="text-xl font-bold text-[#191F28] mb-3">프로젝트 팀에 합류</h3>
+              <h3 className="text-xl font-bold text-[#191F28] mb-3">
+                프로젝트 팀에 합류
+              </h3>
               <p className="text-[#4E5968] leading-relaxed">
-                아키텍처, 폴더 구조, 컨벤션을 짧은 가이드로 익히고, COZZY가 추천하는 '첫 이슈'를 선택하세요.
+                아키텍처, 폴더 구조, 컨벤션을 짧은 가이드로 익히고, COZZY가
+                추천하는 &apos;첫 이슈&apos;를 선택하세요.
               </p>
             </div>
             <div className="group p-8 rounded-[32px] bg-gray-50 hover:bg-blue-50/50 transition-colors">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                 <Rocket className="w-7 h-7 text-[#3182F6]" />
               </div>
-              <h3 className="text-xl font-bold text-[#191F28] mb-3">코드 독해</h3>
+              <h3 className="text-xl font-bold text-[#191F28] mb-3">
+                코드 독해
+              </h3>
               <p className="text-[#4E5968] leading-relaxed">
-                관련 파일과 읽기 경로를 안내받으며 낯선 코드도 단계적으로 이해할 수 있어요.
+                관련 파일과 읽기 경로를 안내받으며 낯선 코드도 단계적으로 이해할
+                수 있어요.
               </p>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
