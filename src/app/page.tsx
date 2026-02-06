@@ -16,13 +16,13 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-[#191F28] tracking-tight leading-[1.1]">
-            개발자의 성장을 위한<br/>
-            <span className="text-[#3182F6]">가상 입사 프로젝트</span>
+            실전 코드베이스에 중도 합류하는<br/>
+            <span className="text-[#3182F6]">첫 프로젝트 경험, COZZY</span>
           </h1>
           
           <p className="text-xl text-[#4E5968] max-w-2xl mx-auto leading-relaxed">
             실제 기업 환경과 유사한 프로젝트에 참여하여<br className="hidden md:block"/>
-            협업 능력과 기술 역량을 키워보세요. 
+            코드 독해력과 기술 역량을 키워보세요. 
           </p>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -47,27 +47,27 @@ export default function Home() {
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                 <Code2 className="w-7 h-7 text-[#3182F6]" />
               </div>
-              <h3 className="text-xl font-bold text-[#191F28] mb-3">실전 코드 분석</h3>
+              <h3 className="text-xl font-bold text-[#191F28] mb-3">나에게 맞는 프로젝트 선택</h3>
               <p className="text-[#4E5968] leading-relaxed">
-                현업 수준의 코드를 분석하고 리팩토링하며 코드 품질을 높이는 방법을 배웁니다.
+                관심 스택·난이도·도메인을 설정하면 실전처럼 진행 중인 프로젝트를 추천해 드려요.
               </p>
             </div>
             <div className="group p-8 rounded-[32px] bg-gray-50 hover:bg-blue-50/50 transition-colors">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                 <Users className="w-7 h-7 text-[#3182F6]" />
               </div>
-              <h3 className="text-xl font-bold text-[#191F28] mb-3">팀 협업 시뮬레이션</h3>
+              <h3 className="text-xl font-bold text-[#191F28] mb-3">프로젝트 팀에 합류</h3>
               <p className="text-[#4E5968] leading-relaxed">
-                가상의 팀원들과 함께 코드 리뷰를 주고받으며 협업 커뮤니케이션을 익힙니다.
+                아키텍처, 폴더 구조, 컨벤션을 짧은 가이드로 익히고, COZZY가 추천하는 '첫 이슈'를 선택하세요.
               </p>
             </div>
             <div className="group p-8 rounded-[32px] bg-gray-50 hover:bg-blue-50/50 transition-colors">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
                 <Rocket className="w-7 h-7 text-[#3182F6]" />
               </div>
-              <h3 className="text-xl font-bold text-[#191F28] mb-3">커리어 성장</h3>
+              <h3 className="text-xl font-bold text-[#191F28] mb-3">코드 독해</h3>
               <p className="text-[#4E5968] leading-relaxed">
-                프로젝트 완료 후 포트폴리오로 활용 가능한 상세 리포트를 제공받습니다.
+                관련 파일과 읽기 경로를 안내받으며 낯선 코드도 단계적으로 이해할 수 있어요.
               </p>
             </div>
           </div>

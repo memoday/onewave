@@ -134,8 +134,8 @@ export default function AnalysisPage() {
         {/* Main Content */}
         <main className="flex-1 flex flex-col h-full overflow-hidden">
           <div className="flex-1 p-10 space-y-12 overflow-y-auto">
-            <div className="grid grid-cols-12 gap-16">
-              <div className="col-span-7 space-y-16">
+            <div className="grid grid-cols-2 gap-16">
+              <div className="space-y-16">
                 <section>
                   <div className="flex items-center gap-4 mb-8">
                     <h2 className="text-2xl font-bold text-[#191F28]">
@@ -238,7 +238,9 @@ export default function AnalysisPage() {
                     </div>
                   </div>
                 </section>
+              </div>
 
+              <div className="space-y-16">
                 {currentStep === 3 && (
                   <section className="animate-fade-in-up">
                     <div className="flex items-center justify-between mb-8">
@@ -331,224 +333,7 @@ export default function AnalysisPage() {
                   </section>
                 )}
               </div>
-
-              <div className="col-span-5 space-y-16">
-                <section>
-                  <h2 className="text-xl font-bold text-[#191F28] mb-8">
-                    PR 진행 현황
-                  </h2>
-                  <div className="space-y-8">
-                    <div className="flex items-center gap-5">
-                      <div className="w-12 h-12 rounded-2xl bg-[#E8F3FF] flex items-center justify-center text-[#3182F6]">
-                        <i className="fa-solid fa-flask text-xl"></i>
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-base font-bold text-[#191F28]">
-                          로컬 테스트 시뮬레이션
-                        </div>
-                        <div className="text-sm text-[#2DCA73] font-medium">
-                          Success (Pass 12/12)
-                        </div>
-                      </div>
-                      <i className="fa-solid fa-circle-check text-[#2DCA73] text-xl"></i>
-                    </div>
-                    <div className="flex items-center gap-5">
-                      <div
-                        className={`w-12 h-12 rounded-2xl flex items-center justify-center ${currentStep >= 2 ? "bg-[#E8F3FF] text-[#3182F6]" : "bg-[#F2F4F6] text-[#8B95A1]"}`}
-                      >
-                        <i className="fa-solid fa-code-pull-request text-xl"></i>
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-base font-bold text-[#191F28]">
-                          PR 생성하기
-                        </div>
-                        <div
-                          className={`text-sm font-medium ${currentStep >= 3 ? "text-[#2DCA73]" : currentStep === 2 ? "text-[#3182F6]" : "text-[#8B95A1]"}`}
-                        >
-                          {currentStep >= 3
-                            ? "Merged"
-                            : currentStep === 2
-                              ? "In Progress..."
-                              : "리뷰 반영 후 활성화됩니다"}
-                        </div>
-                      </div>
-                      {currentStep >= 3 ? (
-                        <i className="fa-solid fa-circle-check text-[#2DCA73] text-xl"></i>
-                      ) : (
-                        <button
-                          className={`px-5 py-2 text-xs font-bold rounded-xl transition-colors ${currentStep === 2 ? "bg-[#3182F6] text-white hover:bg-[#2272EB]" : "bg-[#F2F4F6] text-[#8B95A1] cursor-not-allowed"}`}
-                        >
-                          작성
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                  <div className="mt-10 pt-10">
-                    <h3 className="text-xs font-bold text-[#8B95A1] mb-5 uppercase tracking-widest">
-                      좋은 PR 템플릿 힌트
-                    </h3>
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-4 p-4 bg-white rounded-2xl">
-                        <i className="fa-solid fa-lightbulb text-[#FFBB00] mt-1"></i>
-                        <p className="text-sm text-[#4E5968] leading-relaxed">
-                          변경 전후의{" "}
-                          <span className="font-bold text-[#191F28]">
-                            스크린샷이나 로그
-                          </span>
-                          를 첨부하면 리뷰어가 훨씬 더 빠르게 이해할 수 있어요.
-                        </p>
-                      </div>
-                      <div className="flex items-start gap-4 p-4 bg-white rounded-2xl">
-                        <i className="fa-solid fa-lightbulb text-[#FFBB00] mt-1"></i>
-                        <p className="text-sm text-[#4E5968] leading-relaxed">
-                          &quot;어떻게&quot; 구현했는지 보다{" "}
-                          <span className="font-bold text-[#191F28]">
-                            &quot;왜&quot;
-                          </span>{" "}
-                          이렇게 수정했는지에 집중해서 작성해보세요.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                <section>
-                  <h2 className="text-xl font-bold text-[#191F28] mb-8">
-                    학습 리포트 요약
-                  </h2>
-                  <div className="space-y-8">
-                    <div>
-                      <div className="flex justify-between text-sm font-bold text-[#191F28] mb-4">
-                        <span>자주 지적받는 리뷰 유형</span>
-                        <span className="text-[#3182F6]">Top 3</span>
-                      </div>
-                      <div className="space-y-4">
-                        <div className="space-y-1.5">
-                          <div className="flex justify-between text-[11px] font-bold text-[#8B95A1]">
-                            <span>비즈니스 로직</span>
-                            <span>60%</span>
-                          </div>
-                          <div className="h-2.5 bg-[#F2F4F6] rounded-full overflow-hidden">
-                            <div className="w-[60%] h-full bg-[#3182F6]"></div>
-                          </div>
-                        </div>
-                        <div className="space-y-1.5">
-                          <div className="flex justify-between text-[11px] font-bold text-[#8B95A1]">
-                            <span>코드 컨벤션</span>
-                            <span>25%</span>
-                          </div>
-                          <div className="h-2.5 bg-[#F2F4F6] rounded-full overflow-hidden">
-                            <div className="w-[25%] h-full bg-[#2DCA73]"></div>
-                          </div>
-                        </div>
-                        <div className="space-y-1.5">
-                          <div className="flex justify-between text-[11px] font-bold text-[#8B95A1]">
-                            <span>테스트 코드</span>
-                            <span>15%</span>
-                          </div>
-                          <div className="h-2.5 bg-[#F2F4F6] rounded-full overflow-hidden">
-                            <div className="w-[15%] h-full bg-[#FFBB00]"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="p-8 bg-[#191F28] rounded-[32px] text-white">
-                      <h3 className="text-sm font-bold text-[#3182F6] mb-3 uppercase tracking-wider">
-                        Next Step
-                      </h3>
-                      <p className="text-sm leading-relaxed mb-6 text-[#ADB5BD]">
-                        &quot;현재 비즈니스 로직 이해도가 매우 높습니다. 다음
-                        단계에서는{" "}
-                        <span className="text-white font-bold underline decoration-[#3182F6] decoration-2 underline-offset-4">
-                          에러 핸들링 패턴
-                        </span>
-                        을 더 깊게 다뤄보는 것을 추천합니다.&quot;
-                      </p>
-                      <button className="w-full py-3 bg-[#333D4B] text-white text-sm font-bold rounded-xl hover:bg-[#4E5968] transition-colors">
-                        추천 이슈 큐레이션 보기
-                      </button>
-                    </div>
-                  </div>
-                </section>
-              </div>
             </div>
-
-            <section className="pt-8 pb-20">
-              <h2 className="text-2xl font-bold text-[#191F28] mb-10">
-                다음 난이도 도전하기
-              </h2>
-              <div className="grid grid-cols-3 gap-10">
-                <div className="group cursor-pointer">
-                  <div className="mb-5 flex justify-between items-center">
-                    <span className="px-3 py-1 bg-white text-[#8B95A1] text-[11px] font-bold rounded-lg">
-                      LEVEL 3
-                    </span>
-                    <i className="fa-solid fa-arrow-right text-[#E5E8EB] group-hover:text-[#3182F6] transition-all transform group-hover:translate-x-1"></i>
-                  </div>
-                  <h3 className="text-xl font-bold text-[#191F28] mb-3 group-hover:text-[#3182F6] transition-colors">
-                    Redis 캐싱 레이어 최적화
-                  </h3>
-                  <p className="text-sm text-[#4E5968] leading-relaxed mb-6">
-                    조회 성능 개선을 위한 캐싱 전략 수립 및 대용량 트래픽 대응
-                    구현
-                  </p>
-                  <div className="flex gap-3">
-                    <span className="text-[11px] font-bold text-[#8B95A1]">
-                      #Backend
-                    </span>
-                    <span className="text-[11px] font-bold text-[#8B95A1]">
-                      #Performance
-                    </span>
-                  </div>
-                </div>
-                <div className="group cursor-pointer">
-                  <div className="mb-5 flex justify-between items-center">
-                    <span className="px-3 py-1 bg-white text-[#8B95A1] text-[11px] font-bold rounded-lg">
-                      LEVEL 4
-                    </span>
-                    <i className="fa-solid fa-arrow-right text-[#E5E8EB] group-hover:text-[#3182F6] transition-all transform group-hover:translate-x-1"></i>
-                  </div>
-                  <h3 className="text-xl font-bold text-[#191F28] mb-3 group-hover:text-[#3182F6] transition-colors">
-                    결제 취소 웹훅 시스템 구축
-                  </h3>
-                  <p className="text-sm text-[#4E5968] leading-relaxed mb-6">
-                    비동기 메시지 큐를 활용한 안정적인 알림 및 재처리 시스템
-                    설계
-                  </p>
-                  <div className="flex gap-3">
-                    <span className="text-[11px] font-bold text-[#8B95A1]">
-                      #Architecture
-                    </span>
-                    <span className="text-[11px] font-bold text-[#8B95A1]">
-                      #Kafka
-                    </span>
-                  </div>
-                </div>
-                <div className="group cursor-pointer">
-                  <div className="mb-5 flex justify-between items-center">
-                    <span className="px-3 py-1 bg-white text-[#8B95A1] text-[11px] font-bold rounded-lg">
-                      LEVEL 2
-                    </span>
-                    <i className="fa-solid fa-arrow-right text-[#E5E8EB] group-hover:text-[#3182F6] transition-all transform group-hover:translate-x-1"></i>
-                  </div>
-                  <h3 className="text-xl font-bold text-[#191F28] mb-3 group-hover:text-[#3182F6] transition-colors">
-                    어드민 통계 대시보드 API
-                  </h3>
-                  <p className="text-sm text-[#4E5968] leading-relaxed mb-6">
-                    복잡한 집계 쿼리 최적화 및 실시간 데이터 시각화 인터페이스
-                    지원
-                  </p>
-                  <div className="flex gap-3">
-                    <span className="text-[11px] font-bold text-[#8B95A1]">
-                      #Database
-                    </span>
-                    <span className="text-[11px] font-bold text-[#8B95A1]">
-                      #Query
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </section>
           </div>
         </main>
       </div>
