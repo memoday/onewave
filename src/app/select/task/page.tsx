@@ -80,7 +80,7 @@ const REPOSITORIES = [
   }
 ]
 
-export default function TaskSelectPage() {
+function TaskSelectContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [selectedRepoId, setSelectedRepoId] = React.useState<number | null>(null)
@@ -144,10 +144,7 @@ export default function TaskSelectPage() {
     const jobQuery = job ? `&job=${job}` : ''
     router.push(`/select/analysis${query}${jobQuery}`)
   }
-  
-  const handlePrev = () => {
-    router.back()
-  }
+
 
   return (
     <div className="min-h-screen bg-[#F9FAFB]">
@@ -293,5 +290,13 @@ export default function TaskSelectPage() {
       </div>
 
     </div>
+  )
+}
+
+export default function TaskSelectPage() {
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <TaskSelectContent />
+    </React.Suspense>
   )
 }

@@ -80,7 +80,7 @@ const TECH_STACKS = [
   // }
 ]
 
-export default function TechSelectPage() {
+function TechSelectContent() {
   const router = useRouter()
   const [selectedTechs, setSelectedTechs] = React.useState<string[]>([])
 
@@ -217,5 +217,13 @@ export default function TechSelectPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function TechSelectPage() {
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <TechSelectContent />
+    </React.Suspense>
   )
 }

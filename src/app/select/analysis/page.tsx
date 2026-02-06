@@ -1,11 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { useRouter } from "next/navigation"
-import { cn } from "@/lib/utils"
 
 export default function AnalysisPage() {
-  const router = useRouter()
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -178,7 +176,7 @@ export default function AnalysisPage() {
                                     </div>
                                     <div className="flex items-start gap-4 p-4 bg-white rounded-2xl">
                                         <i className="fa-solid fa-lightbulb text-[#FFBB00] mt-1"></i>
-                                        <p className="text-sm text-[#4E5968] leading-relaxed">"어떻게" 구현했는지 보다 <span className="font-bold text-[#191F28]">"왜"</span> 이렇게 수정했는지에 집중해서 작성해보세요.</p>
+                                        <p className="text-sm text-[#4E5968] leading-relaxed">&quot;어떻게&quot; 구현했는지 보다 <span className="font-bold text-[#191F28]">&quot;왜&quot;</span> 이렇게 수정했는지에 집중해서 작성해보세요.</p>
                                     </div>
                                 </div>
                             </div>
@@ -225,7 +223,7 @@ export default function AnalysisPage() {
                                 <div className="p-8 bg-[#191F28] rounded-[32px] text-white">
                                     <h3 className="text-sm font-bold text-[#3182F6] mb-3 uppercase tracking-wider">Next Step</h3>
                                     <p className="text-sm leading-relaxed mb-6 text-[#ADB5BD]">
-                                        "현재 비즈니스 로직 이해도가 매우 높습니다. 다음 단계에서는 <span className="text-white font-bold underline decoration-[#3182F6] decoration-2 underline-offset-4">에러 핸들링 패턴</span>을 더 깊게 다뤄보는 것을 추천합니다."
+                                        &quot;현재 비즈니스 로직 이해도가 매우 높습니다. 다음 단계에서는 <span className="text-white font-bold underline decoration-[#3182F6] decoration-2 underline-offset-4">에러 핸들링 패턴</span>을 더 깊게 다뤄보는 것을 추천합니다.&quot;
                                     </p>
                                     <button className="w-full py-3 bg-[#333D4B] text-white text-sm font-bold rounded-xl hover:bg-[#4E5968] transition-colors">
                                         추천 이슈 큐레이션 보기
